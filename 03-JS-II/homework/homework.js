@@ -70,19 +70,19 @@ function colors(color) {
 
   switch (color) {
     case "blue":
-      return "This is Blue";
+      return "This is blue";
       break;
 
     case "red":
-      return "This is Red";
+      return "This is red";
       break;
 
     case "green":
-      return "This is Green";
+      return "This is green";
       break;
 
     case "orange":
-      return "This is Orange";
+      return "This is orange";
       break;
 
     default:
@@ -148,10 +148,10 @@ function operadoresLogicos(num1, num2, num3) {
     return "Error";
  
      } else if (num1 < 0 || num2 < 0 || num3 < 0) {
-        return "Hay Negativos";
+        return "Hay negativos";
   
   } else if (num1 > num2 && num1 > num3) {
-    return "Numero 1 es mayor y positivo";
+    return "Número 1 es mayor y positivo";
   
   } else if (num3 > num1 && num3 > num2) {
     return num3 + 1;
