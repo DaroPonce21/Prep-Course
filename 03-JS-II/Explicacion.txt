@@ -1,0 +1,71 @@
+For
+
+El For (Para) nos permite pedirle al programa que realice una accion determinada para una variable.
+Veamos un ejemplo de la vida real.
+
+Supongamos que queres regalar caramelos en una bolsa y a todos les queres dar 20 caramelos en cada bolsa, asi que tendrias que ir tomando de 1 en 1 los caramelos y meterlos en la bolsa hasta que haya 20
+bien entonces, tomarias 1 caramelo, mirarias en la bolsa, si hay 20, todavia no, entonces pongo 1 caramelo.
+tomo otro caramelo, hay 20? no, todavia no hay 20 entonces pongo otro. Es una forma extraña de explicarlo pero viendolo con el codigo lo entenderas mejor
+
+tenemos nuestra caja vamos a completarla usando el for
+
+var caja = 20; 
+
+for(var i = 0; i < 20; i++){
+    caja = i;
+    console.log(caja);
+}
+
+Vamos a explicar esto. La forma de usar el for es for(expresion inicial; condicion; expresion final) o dicho de otra forma 
+for (cantidad inicial;  punto de corte o hasta que momento hacer -->> ; hace esto){
+}
+
+te recomiendo que lo leas asi:
+primero la expresion final, "Hace esto hasta que..." 
+luego el segundo "condicion" "... hasta que la (condicion incial) cumpla con esto"
+
+var i = 0; es nuestro contador o iterador (por eso la i aunque podes usar cualquier nombre, pero convencionalmente se usa i, j)
+
+es decir "i" nos dice que la caja esta en 0 unidades (o que el bucle for todavia no arranco)
+"i++" nos pide que cada vez que for se active, "i" sume 1 unidad (de 1 en 1)
+¿pero cuantas veces? mientras que la condicion se cumpla es decir "i" sea menor que 20 
+Y ahi entra la sentencia es decir que queremos que el programa haga cada vez que for se ejecute.
+en nuestro caso que caja obtenga el valor de i en esa vuelta.
+
+Algo super importante es que el bucle For PRIMERO se fija si la condicion se cumple y despues realiza la sentencia.
+es decir que si yo iniciase la "i" en 21 por ejemplo
+var i = 21; i va a ser mayor que 20 desde antes del for... por lo que for no hara nada simplemente saltara al siguiente paso de nuestro codigo.
+es decir que si declaramos mal nuestra condicion de corte o la inicial podria no ejecutarse nunca el for. 
+
+
+&&, ||, !
+
+Los siguientes signos tiene funciones muy importantes en nuestra programacion logica. Se utilizan generalmente cuando usamos las sentencias if, for, while, do while.
+
+&& Esta pareja inseparable basicamente significa "Y" o "AND" lo que quiere decir que ambas condiciones se deben cumplirse para que se de el valor True
+
+por ejemplo si comparamos 2 numeros y que sean pares si A=2 y B=4 nos devolvera True, pero si A = 2 y B = 5 nos devolvera False, porque ambos deben ser pares
+
+(A=== Par && B=== Par) (A y B sean Par)
+
+A Par + B Par = True
+A Par + B Impar = False
+A Impar + B Par = False
+A Impar + B Impar = False
+
+|| Es una pareja mas independiente, su significado es "O" o "OR" lo que quiere decir que para que sea True al menos UNA de las condisiones debe cumplirse
+siguiendo el ejemplo con que uno de los 2 numeros sea par alcanzaria para darnos True
+
+(A=== Par || B=== Par) (A o B sean Par)
+
+A Par + B Par = True
+A Par + B Impar = True
+A Impar + B Par = True
+A Impar + B Impar = False
+
+Como podemos ver && nos ofrece 1 sola opcion de True y 3 False mientras que || Nos ofrece 3 True y 1 False
+
+El Operador !
+
+Es el Operador de Negacion es decir (NO) este se utiliza cuando buscamos decir que algo no sea de X forma, es decir "Que A no sea Par"
+en ese caso diriamos (A != Par) por lo tanto es un signo de negacion.
