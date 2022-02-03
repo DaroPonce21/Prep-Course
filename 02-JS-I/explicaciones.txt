@@ -1,0 +1,187 @@
+// Cuando veas una doble barra, estoy dejandote un comentario
+
+Variables:
+Las Variables funcionan como una caja donde podemos almacenar DATOS.
+estos Datos deben ser del mismo tipo para cada Caja. Es decir, que si ponemos en una caja datos numericos enteros (1 2 3),
+esa caja solo podra llevar datos numericos enteros. Del mismo modo podemos hacerlo para caracteres independientes(letras, simbolos, o numeros entre comillas), cadena de caracteres (lo que en lenguaje coloquial llamamos palabras)
+numeros decimales (1.5) Datos logicos verdadero o falso (True / False).
+Basicamente las Variables es donde almacenaremos nuestros datos para luego ser utilizados por programa que crearemos.
+Las variables pueden, como su palabra lo indica, cambiar, es decir que podemos modificarlas a lo largo de la ejecucion del programa.
+Por otro lado las Constantes, como indica su nombre, no pueden cambiar su valor una vez asignado.
+
+Para declarar una Variable utilizaremos la palabra reservada var y luego de un espacio el nombre que queramos poner y luego un = con su valor
+
+Para declarar una Constante usaremos la palabra reservada const y del mismo modo que con las variables, el nombre y un = con su valor (que no podra cambiar luego)
+
+Ejemplo:
+
+var cantidadBananas = 10; 
+// esta es una variable, la podemos cambiar a lo largo del programa, y es de tipo numerica entera
+
+const DNI = 11111111;
+// esta es una constante, tambien es de tipo numerica entera, pero no la podremos cambiar durante el programa.
+
+tipos de Variable o Constantes
+
+var numeroEntero = 10;
+var numeroDecimal = 10.6;
+var caracterTambienLLamadoChar = 'a';
+var palabraTambienLlamadoString = "Hola";
+
+var estoTambienEsUnString = "10";
+
+A diferencia de la variable numeroEntero = 10 y la variable estoTambienEsUnString = "10" es que al estar entre comillas
+el interprente (es decir nuestro compilador) lo tomara como caracteres y no como numeros que se pueden sumar o restar.
+
+Strings
+
+Los Strings son cadenas de caracteres, lo que nosotros en nuestro idioma llamariamos "Palabras" tu nombre, por ejemplo, esta compuesto
+por caracteres es decir, si te llamas Dario, tu nombre esta compuesto por el Caracter "D" "a" "r" "i" "o" y hay que entender que no es lo mismo
+"D" que "d" son 2 caracteres distintos. 
+En los Strings estos caracteres se unen para formar una variable de tipo cadena.
+
+Funciones
+
+Las funciones son una herramienta fundamental en la programacion, ya que nos permite "trabajar menos" y eso siempre es mejor
+Pero hablando seriamente, las Funciones nos permiten escribir una "tarea" que queremos que el codigo realice y sabemos que tendremos que usar varias veces
+entonces en lugar de escribir esta funcion 10 veces o mas, creamos una funcion que nos permita hacer eso solo "llamandola"
+
+Pongamos un ejemplo de la vida cotidiana, imaginate que tenes que escribir todo lo que haces en el dia, con exactitud.
+Y supongamos que tomas agua de una botella que esta en la heladera o nevera y esto lo haces cada 2 horas, en tu diario donde escribes
+deberias poner cada 2hs. "Abri la heladera, tome la botella, cerre la heladera, destape la botella, me servi la bebida en un vaso, tape la botella,
+abri la heladera, coloque la botella en la heladera, cerre la heladera, tome el vaso, bebi el agua."
+
+te imaginas escribir todo eso cada 2hs? bueno si tuvieses una funcion en tu diario podrias llamarla por ejempo "beberAgua"
+escribiras todo eso 1 sola vez y cada vez que tienes que hacer mension a beber agua... solo pondrias en tu diario "beberAgua"
+
+Esto llevado a la programacion es muy similar, imaginemos que tenemos que saludar en nuestro programa y sabemos que lo haremos varias veces
+en si es algo simple pero funcionara para nuestro ejemplo
+
+const saludo = function saludar() {
+  return "Hola";
+};
+
+saludo(); 
+
+primero declaramos una const llamada saludo y luego usamos el = 
+// hasta ahi es como vimos antes en la declaracion de variables y Constantes
+// const numero = 10
+
+la diferencia es que ahora en lugar de asignarle un numero o string le asignamos una "funcion" o function que es la palabra reservada para las funciones
+luego le ponemos un nombre a la funcion como con las variables, pero le agregamos un parentesis () en estos parentesis podremos poner argumetos, ahora veremos que son,
+y luego abrimos llaves { }
+entre medio de esas llaves vamos a poner lo que queremos que nuestra funcion haga... tomar agua o saludar en nuestro caso
+return es otra palabra reservada y lo que hara es retornarnos o devolvernos lo que le pidamos en este caso el String "Hola"
+al finalizar la declaracion de la funcion es decir despues del ultimo "}", colocaremos un punto y coma ;
+
+luego en nuestro programa cada vez que tengamos que saludar solamente llamaremos a la funcion mediante el nombre de la constante, es decir pondremos el nombre de la misma 
+
+saludo();
+
+como podemos ver esto ayuda a tipear menos, claramente este ejemplo es simple y corto pero dentro de una funcion podemos poner que se realicen tareas mas complejas
+que sabemos que usaremos varias veces en nuestro programa.
+
+Argumentos
+
+Los argumentos nos sirven para poder pasar variables a nuestras funciones, de esa manera podremos utilizarlas para mas cosas aunque siempre con el mismo finalizar
+es decir supongamos que tenemos que sumar varios numeros en distinto momento, estos numeros estaran en variables y nosotros debemos presentar el resultado.
+podremos hacerlo con los parametros dentro de la funcion
+
+Ejemplo
+
+function sumar(a, b) {
+  return a + b;
+}
+console.log( sumar(10, 9) ) 
+
+//Imprime 19
+
+Se crea la funcion sumar pero en este caso entre parentesis le decimos que queremos que sume (a, b)
+el return nos devolvera a + b
+
+y luego mediante la sentencia console.log() // la cual sirve para imprimir informacion en la consola
+
+le ponemos dentro de los parentesis que queremos que imprima la funcion sumar y los valores 10 y 9
+
+es decir console.log(sumar (10, 9)) a y b son 10 y 9, sumar la funcion, console.log imprimimelo en la consola.
+esto metera el 10 y el 9 en function sumar, se haga la funcion + y el return nos devolvera el resultado cargado en sumar
+entonces console.log imprimira sumar que ahora vale 19
+Si mas adelante volvemos a llamar a sumar, pero le damos otros valores, hara el proceso otra vez con la suma de esos valores.
+
+como podemos ver nos ahorra mucho codigo y tambien nos permite detectar errores mas facilmente.
+
+supongamos que en lugar de el simbolo + aprentamos * solo cambiaremos 1 vez dentro de la funcion y todo se corregira.
+si no usaramos funciones y este error lo cometimos muchas veces, tendremos que buscar en todo nuestro codigo cada vez que nos equivocamos y cambiarlo uno por uno.
+
+Declaracion if
+
+Esta declaracion es genial, ya que es relativamente simple, sera la primera que aprendas en cualquier lenguaje de programacion
+y sera una que usaras practicamente en todos tus programas.
+if es una palabra reservada y lo que te premite es comparar variables y entregarte una respuesta verdadera o falsa
+
+un ejemplo simple en tu dia cotidiano seria, ¿el vaso de cafe esta X dolares yo tengo Z dolares, puedo comprarlo? 
+
+si el vaso de cafe esta 1 dolar 
+
+var vasoCafe = 1;
+
+y yo tengo en la billetera/cartera 1.5 dolares
+
+var billetera = 1.5;
+
+¿lo que tengo en la billetera es igual o mayor a lo que sale el cafe? Si, entonces puedo comprarlo
+si lo que tuviesemos seria menor, entonces no podriamos. If funciona igual, sigamos con el ejemplo
+
+if(billetera => vasoCafe){
+    return "Puedo tomarme ese cafecito =D ";
+    } else {
+        return "No puedo tomar el cafecito ='C";
+    }
+
+if nos permite comparar aquello que pongamos entre sus ( ) luego como en las funciones abrimos unas llaves { }
+donde le diremos que queremos que haga en caso de que lo que comparamos se cumpla, es decir sea verdadero o como se dice en programacion
+sea True en este caso quiero que me devuelva un "puedo tomar cafecito y la carita"
+
+else es otra palabra reservada y significa "de otro modo" o "sino" o "entonces" y abrimos llaves para decirle que tiene que suceder si no se cumple la condicion
+osea si es False 
+
+tambien existe algo llamado if else que nos permite darle mas opciones. Por ejemplo supongamos que yo necesito que me sobre algo de dinero despues de comprar el cafe
+no importa cuanto (para no complicar el ejemplo) entonces ya no me vale un "x = x" porque no me sobraria. Necesito tener mas.
+y supongamos que queremos que le avise al usuario en caso de que le alcance "puedes tomarlo" en caso de que no le alcance ni para comprarlo "no puedes comprarlo"
+y en caso de que tenga el dinero justo que "tiene el dinero justo"
+en ese caso necesitaremos una comprobacion mas para poder respodener cualquiera de las 3: 
+Puede haber 1 True (es decir tiene mas dinero de lo que sale 1.5 > 1)
+Puede haber 1 False (es decir tenemos 0.8 > 1 cafe)
+Pero puede tambien hacer otro False (1 > 1 False pero 1 === 1 True) 
+// se usa 1 = para asigar valor, como en las variables
+// se usa 2 == para comparar valores, pero no tipos de datos (es mala practica)
+// se usa 3 === para comparar valores y tipos de datos (es la practica correcta en JS)
+
+if(billetera > vasoCafe){
+    return "Puedo tomarme ese cafecito =D ";
+    
+    } else if (billetera === vasoCafe){
+        return "Tienes el dinero justo";
+    
+    }else
+        return "No tienes dinero suficiente";
+
+De este modo estariamos diciendo: 
+"IF si esto se cumple hace esto", 
+ELSE IF "si no se cumple fijate si esto si se cumple y hace esto otro", 
+ELSE "si nada se cumple hace esto"
+
+usaras If e Else muchisimo ya que es una de las mejores formas de comparar y como vez su sentencia es simple de entender y ejecutar.
+
+Valores Booleanos
+
+Habiando hablado ya de Variables Constantes y IF ELSE, esto te sera simple.
+los valores Booleanos, son valores de Verdadero o Falso, o como dijimos antes True or False
+los valores Booleanos estan marcados por numeros binarios 0 o 1 pero para no confundirnos simplemente digamos que el programa nos puede devolver 
+alguno de los 2
+
+podemos declarar variable booleanas
+
+var boolean = True;
+
+por ejemplo para usarla en un comparador a futuro, tambien el programa lo usara para comparar mediante sentencias if else.
