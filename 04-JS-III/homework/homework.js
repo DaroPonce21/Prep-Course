@@ -17,6 +17,8 @@ function obtenerLargoDelArray(array) {
   // Tu código:
 
   return array.length;
+
+
 }
 
 function incrementarPorUno(array) {
